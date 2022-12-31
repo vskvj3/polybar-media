@@ -2,9 +2,9 @@
 
 status=$(playerctl status)
 
-song=$(playerctl metadata | grep title | cut -b 37-)
+song=$(playerctl metadata title)
 
-artist=$(playerctl metadata | grep artist | cut -b 37-)
+artist=$(playerctl metadata artist)
 
 if [ $status = 'Playing' ]
 then
